@@ -1,78 +1,456 @@
-Baby Shower Gift Registry
-Welcome, Baby Alma
-Your love and presence are the greatest gifts. If you'd like to bless our little girl with something special, we've put together a few ideas below. ♡
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Thank you for celebrating this beautiful chapter with us. We are so grateful for every gift, prayer, and loving thought for baby Alma.
+  <title>Welcome, Baby Alma</title>
 
-♡ Baby Essentials
-Diapers — Mama Bear Gentle Touch
-Size 1 • Hypoallergenic
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-View Gift
-Baby Wipes — Seventh Generation
-Free & Clear • Fragrance-free
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fff9f8;
+      color: #5d3b3f;
+    }
 
-View Gift
-Baby Bottles — Philips Avent
-Natural Response • 8 oz
+    .hero {
+      text-align: center;
+      padding: 70px 20px 60px;
+      background:
+        radial-gradient(circle at 10% 20%, #f5d4d7 0, transparent 25%),
+        radial-gradient(circle at 90% 30%, #f1d0d4 0, transparent 25%),
+        linear-gradient(135deg, #fff8f6, #f9e4e5);
+      border-bottom: 2px solid #c9a15b;
+    }
 
-View Gift
-Burp Cloths — KeaBabies
-Organic cotton • 5-pack
+    .small-title {
+      letter-spacing: 4px;
+      color: #b0843c;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
 
-View Gift
-♡ Clothing
-Baby Bodysuits — Burt's Bees Baby
-Organic cotton • 3–9 months
+    h1 {
+      margin: 0;
+      color: #9b5360;
+      font-size: clamp(45px, 7vw, 82px);
+      font-weight: normal;
+    }
 
-View Gift
-Baby Pajamas — Gerber
-Soft zippered sleepers
+    .heart {
+      color: #c99b50;
+      font-size: 30px;
+      margin: 15px 0;
+    }
 
-View Gift
-Socks & Bows
-Sweet everyday accessories
+    .intro {
+      max-width: 760px;
+      margin: 20px auto 0;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #67484b;
+    }
 
-View Gift
-♡ Nursery & Sleep
-Crib Sheets — Burt's Bees Baby
-Organic cotton fitted sheets
+    .thank-you {
+      max-width: 850px;
+      margin: 35px auto 0;
+      padding: 25px;
+      border: 1px solid #d7b16b;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.65);
+      font-size: 17px;
+      line-height: 1.7;
+    }
 
-View Gift
-Muslin Swaddles — aden + anais
-Organic cotton • 4-pack
+    .section {
+      padding: 55px 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-View Gift
-Sleep Sack — HALO
-Wearable blanket
+    .section-title {
+      text-align: center;
+      color: #a15b67;
+      font-size: 34px;
+      font-weight: normal;
+      margin-bottom: 35px;
+    }
 
-View Gift
-Night Light
-Soft light for nighttime feedings
+    .section-title span {
+      color: #c69a4d;
+    }
 
-View Gift
-♡ Bath & Care
-Baby Bath Set
-Gentle wash, shampoo & lotion
+    .gift-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
 
-View Gift
-Hooded Towels
-Soft newborn hooded towels
+    .gift-card {
+      background: white;
+      border: 1px solid #d8b46b;
+      border-radius: 18px;
+      padding: 25px 18px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(120, 70, 75, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
 
-View Gift
-Baby Grooming Kit
-Brush, comb & nail care
+    .gift-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(120, 70, 75, 0.15);
+    }
 
-View Gift
-♡ Mommy
-Mommy Gift Card
-A little something special for Mom
+    .icon {
+      width: 65px;
+      height: 65px;
+      margin: -50px auto 15px;
+      border-radius: 50%;
+      background: #efc5ca;
+      border: 3px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+    }
 
-View Gift
-Meal Delivery Gift Card
-For an easy meal after baby arrives
+    .gift-card h3 {
+      color: #713f46;
+      font-size: 22px;
+      margin: 12px 0 8px;
+    }
 
-View Gift
-With love,
-Thank you for helping us prepare for our little blessing, Alma. We can't wait to celebrate with you! ♡
-Baby Alma • With love and gratitude
+    .gift-card p {
+      min-height: 45px;
+      color: #806267;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .gift-button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      border-radius: 25px;
+      background: #c96f7b;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease;
+    }
+
+    .gift-button:hover {
+      background: #a95360;
+    }
+
+    .final-message {
+      margin: 20px auto 60px;
+      max-width: 950px;
+      text-align: center;
+      padding: 35px 20px;
+      border: 1px solid #d7b16b;
+      border-radius: 20px;
+      background: #fbe9e9;
+    }
+
+    .final-message h2 {
+      color: #b45f6b;
+      font-size: 32px;
+      font-weight: normal;
+      margin: 0 0 10px;
+      font-style: italic;
+    }
+
+    .final-message p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #d9909a;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      border-top: 3px solid #c59a4d;
+    }
+
+    @media (max-width: 900px) {
+      .gift-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gift-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 50px 18px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+
+    <div class="small-title">
+      Baby Shower Gift Registry
+    </div>
+
+    <h1>Welcome, Baby Alma</h1>
+
+    <div class="heart">♡</div>
+
+    <p class="intro">
+      Your love and presence are the greatest gifts.
+      If you'd like to bless our little girl with something special,
+      we've put together a few ideas below. ♡
+    </p>
+
+    <div class="thank-you">
+      Thank you for celebrating this beautiful chapter with us.
+      We are so grateful for every gift, prayer, and loving thought
+      for baby Alma. ♡
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- BABY ESSENTIALS -->
+    <section class="section">
+
+      <h2 class="section-title">
+        <span>♡</span> Baby Essentials
+      </h2>
+
+      <div class="gift-grid">
+
+        <div class="gift-card">
+          <div class="icon">🧷</div>
+          <h3>Diapers</h3>
+          <p>Keep baby Alma cozy, comfortable and dry.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=baby+diapers+size+1"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🧻</div>
+          <h3>Baby Wipes</h3>
+          <p>Fragrance-free and gentle for newborn skin.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=fragrance+free+baby+wipes"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🍼</div>
+          <h3>Baby Bottles</h3>
+          <p>Newborn-friendly bottles for feeding time.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=Philips+Avent+Natural+Response+baby+bottles"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">👗</div>
+          <h3>Baby Clothes</h3>
+          <p>Soft, comfortable and adorable outfits for Alma.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.target.com/s?searchTerm=baby+girl+clothes"
+            target="_blank">
+            VIEW AT TARGET
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🌸</div>
+          <h3>Swaddles & Blankets</h3>
+          <p>Cozy and soft for peaceful little naps.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=baby+swaddles+blankets"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🛏️</div>
+          <h3>Crib Sheets</h3>
+          <p>Soft and breathable sheets for sweet dreams.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.target.com/s?searchTerm=baby+crib+sheets"
+            target="_blank">
+            VIEW AT TARGET
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🛁</div>
+          <h3>Bath Time</h3>
+          <p>Everything needed for baby's bath routine.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=baby+bath+set"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🎀</div>
+          <h3>Pacifiers</h3>
+          <p>Soothing and gentle options for baby Alma.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.target.com/s?searchTerm=baby+pacifiers"
+            target="_blank">
+            VIEW AT TARGET
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NURSERY & MOM -->
+    <section class="section">
+
+      <h2 class="section-title">
+        <span>♡</span> Nursery & Mommy
+      </h2>
+
+      <div class="gift-grid">
+
+        <div class="gift-card">
+          <div class="icon">🧸</div>
+          <h3>Baby Monitor</h3>
+          <p>Peace of mind for every precious moment.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=baby+monitor"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🧴</div>
+          <h3>Baby Skincare</h3>
+          <p>Gentle care for delicate newborn skin.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.target.com/s?searchTerm=baby+skincare"
+            target="_blank">
+            VIEW AT TARGET
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🤱</div>
+          <h3>Nursing Essentials</h3>
+          <p>Helpful essentials for Mommy and feeding time.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.amazon.com/s?k=nursing+essentials+for+mom"
+            target="_blank">
+            VIEW ON AMAZON
+          </a>
+        </div>
+
+
+        <div class="gift-card">
+          <div class="icon">🎁</div>
+          <h3>Gift Cards</h3>
+          <p>A little something to help us choose what we need.</p>
+
+          <a
+            class="gift-button"
+            href="https://www.target.com/giftcards"
+            target="_blank">
+            TARGET GIFT CARD
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="final-message">
+
+      <h2>Every gift is a blessing. ♡</h2>
+
+      <p>
+        Thank you for helping us prepare for our little princess, Alma.
+        Your love, prayers and generosity mean so much to us.
+      </p>
+
+      <strong>
+        With love and gratitude ♡
+      </strong>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    ♡ Made with love for Baby Alma ♡
+  </footer>
+
+</body>
+</html>
